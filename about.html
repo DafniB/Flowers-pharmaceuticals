@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products - Flowers Pharmaceuticals</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            animation: fadeIn 1.5s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        .section {
+            transition: transform 0.5s, opacity 0.5s;
+        }
+        .section:hover {
+            transform: scale(1.02);
+            opacity: 0.9;
+        }
+    </style>
+</head>
+<body class="w-screen bg-red-400 text-black">
+    <!-- Navbar -->
+    <header class="absolute top-0 left-0 w-full flex justify-between items-center h-16 p-4 bg-yellow-200 text-black z-10 shadow-lg">
+        <div class="flex items-center space-x-3">
+            <img src="flowers-pharmaceuticals-removebg-preview.png" alt="Company Logo" class="h-16 max-h-20 object-contain">
+        </div>
+    <button id="mobile-menu-button" class="md:hidden text-black">☰</button>
+
+    <nav class="space-x-6 hidden md:flex">
+        <a href="index.html" class="relative hover:text-black before:absolute before:bottom-0 before:left-0 before:w-full before:h-1 before:bg-red-400 before:scale-x-0 hover:before:scale-x-100 before:transition-transform">Home</a>
+        <a href="about.html" class="relative hover:text-black before:absolute before:bottom-0 before:left-0 before:w-full before:h-1 before:bg-red-400 before:scale-x-0 hover:before:scale-x-100 before:transition-transform">About</a>
+        <a href="products.html" class="relative hover:text-black before:absolute before:bottom-0 before:left-0 before:w-full before:h-1 before:bg-red-400 before:scale-x-0 hover:before:scale-x-100 before:transition-transform">Products</a>
+        <a href="media.html" class="relative hover:text-black before:absolute before:bottom-0 before:left-0 before:w-full before:h-1 before:bg-red-400 before:scale-x-0 hover:before:scale-x-100 before:transition-transform">Media</a>
+        <a href="contact.html" class="relative hover:text-black before:absolute before:bottom-0 before:left-0 before:w-full before:h-1 before:bg-red-400 before:scale-x-0 hover:before:scale-x-100 before:transition-transform">Contact</a>
+    </nav>
+
+    <a href="contact.html" class="bg-red-400 text-black px-6 py-2 rounded-lg font-bold hover:bg-red-400 transition">
+        Request Info
+    </a>
+    
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="absolute top-16 left-0 w-full bg-yellow-200 text-black hidden flex-col space-y-2 p-4 md:hidden shadow-md">
+        <a href="index.html" class="block">Home</a>
+        <a href="about.html" class="block">About</a>
+        <a href="products.html" class="block">Products</a>
+        <a href="media.html" class="block">Media</a>
+        <a href="contact.html" class="block">Contact</a>
+        <a href="contact.html" class="bg-red-400 text-black px-6 py-2 rounded-lg font-bold hover:bg-red-400 transition">
+            Request Info
+        </a>
+        
+    </div>
+
+    <script>
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+    </script>
+</header>
+    
+<!-- About Me Section -->
+<section class="section min-h-screen bg-red-400 text-black flex flex-col justify-center items-center text-center p-10 pt-24 shadow-lg">
+    <h2 class="text-5xl font-bold underline decoration-yellow-200">About Us</h2>
+    <p class="text-lg max-w-5xl mt-4">
+        Flowers Pharmaceuticals  is the largest contract manufacturing nutraceuticals company of India. 
+        The organization deals in the manufacturing and export of formulations of Nutraceutical segments. The 
+        company is currently supplying to almost all India pharmaceutical companies across the globe. The  state
+        of-the-art facilities are dedicated to Ayurvedic  food supplements & nutraceuticals and animal health care.
+        Flowers Pharmaceuticals  has been successful in attaining national and international 
+        accreditations and building trust on Efficacy, Safety & Quality. The organization is certified with WHO-GMP, 
+        ISO 9001:2015, FSSAI and ISO 22000:2018 certificates.
+    </p>
+</section>
+
+<!-- Vision and Mission Section -->
+<section class="section min-h-screen bg-yellow-200 text-black flex flex-col justify-center items-center text-center p-10 shadow-lg">
+    <h2 class="text-5xl font-bold underline decoration-red-400">Vision & Mission</h2>
+    <p class="text-lg max-w-5xl mt-4">
+        Our vision is to be a pioneering force in the healthcare industry, delivering safe and effective nutraceutical products. Our mission is to drive innovation and maintain global standards in research, development, and manufacturing to enhance health and well-being worldwide.
+    </p>
+</section>
+
+<!-- Services Section -->
+<section id="services" class="section min-h-screen bg-red-400 text-black flex flex-col justify-center items-center text-center p-10 shadow-lg">
+    <h2 class="text-5xl font-bold underline decoration-yellow-200">Our Services</h2>
+    <p class="text-lg max-w-5xl mt-4">
+        Flowers Pharmaceuticals is your trusted partner for expertly crafted, high-quality nutraceutical formulations that prioritize excellence and meet evolving health needs. Our key service benefits include **Multivitamin Drops, Protein Powders, and Infant Formula**, ensuring comprehensive health support. When you work with us, you can expect **regulatory-compliant formulations, strict quality compliance from source to seal, and a one-stop solution for all Nutraceutical and Ayurvedic queries**. Our **diligent R&D solutions** drive innovation, while our **unique product list** features a wide range of in-licensed and first-time-in-India products. **Choose Flowers Pharmaceuticals** for innovation, reliability, and a commitment to superior health solutions that set new industry standards.
+    </p>
+</section>
+
+<!-- Video Section -->
+<section class="flex justify-center items-center p-10 shadow-lg">
+    <video controls class="w-full max-w-4xl bg-yellow-200 rounded-lg shadow-lg hover:scale-105 transition-transform">
+        <source src="frontpage.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+</section>
+
+</body>
+</html>

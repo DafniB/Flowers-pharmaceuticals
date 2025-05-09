@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animal-Products-Tablets</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        function showProductDetails(imageSrc, name, description) {
+            document.getElementById("selected-product").classList.remove("hidden");
+            document.getElementById("product-image").src = imageSrc;
+            document.getElementById("product-name").textContent = name;
+            document.getElementById("product-description").textContent = description;
+
+            document.getElementById("mobile-selected-product").classList.remove("hidden");
+            document.getElementById("mobile-product-image").src = imageSrc;
+            document.getElementById("mobile-product-name").textContent = name;
+            document.getElementById("mobile-product-description").textContent = description;
+        }
+    </script>
+    <style>
+        @media (max-width: 768px) {
+            .mobile-product {
+                display: block !important;
+            }
+        }
+        /* Hide product descriptions for larger screens */
+        .mobile-product {
+            display: none;
+        }
+    </style>   
+    </script>
+</head>
+<body class="bg-red-400 text-black min-h-screen flex">
+    <button onclick="goBack()" class="absolute top-4 right-4 bg-yellow-200 text-black font-bold py-2 px-4 rounded shadow-lg hover:bg-gray-200">
+        &larr; Back
+    </button>
+    
+    
+    
+    <!-- Mobile Product Details Panel (Always Visible) -->
+    <div id="mobile-selected-product" class="hidden">
+        <img id="mobile-product-image" src="" class="w-full h-64 object-cover rounded-lg">
+        <h2 id="mobile-product-name" class="text-2xl font-bold mt-4"></h2>
+        <p id="mobile-product-description" class="mt-2"></p>
+    </div>
+
+    <!-- Product Grid -->
+    <div class="flex-grow p-6">
+        <h1 class="text-left text-3xl font-bold underline decoration-yellow-200 mb-6 ml-4">Tablets</h1>
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+            
+            <!-- Product 1 -->
+            <div class="bg-yellow-200 p-4 rounded-lg shadow-lg cursor-pointer" 
+                onclick="showProductDetails('istockphoto-1338759204-1024x1024.jpg', 'Tablets', 'Our high-quality Nutraceutical tablets are formulated to support various health needs.')">
+                <img src="istockphoto-1338759204-1024x1024.jpg" class="w-full h-40 object-cover rounded-lg">
+                <p class="text-lg font-semibold mt-2">Tablets</p>
+                <p class="text-sm mt-1 mobile-description">Our high-quality Nutraceutical tablets support various health needs.</p>
+            </div>
+
+            <!-- Product 2 -->
+            <div class="bg-yellow-200 p-4 rounded-lg shadow-lg cursor-pointer" 
+                onclick="showProductDetails('istockphoto-1465073112-1024x1024.jpg', 'Capsules', 'Our premium nutraceutical capsules are designed for easy consumption and effective absorption.')">
+                <img src="istockphoto-1465073112-1024x1024.jpg" class="w-full h-40 object-cover rounded-lg">
+                <p class="text-lg font-semibold mt-2">Capsules</p>
+                <p class="text-sm mt-1 mobile-description">Our premium nutraceutical capsules ensure safety, potency, and efficacy.</p>
+            </div>
+
+            <!-- Product 3 -->
+            <div class="bg-yellow-200 p-4 rounded-lg shadow-lg cursor-pointer" 
+                onclick="showProductDetails('istockphoto-531332955-1024x1024.jpg', 'Syrup', 'Our pharmaceutical syrups provide effective and easy-to-administer solutions.')">
+                <img src="istockphoto-531332955-1024x1024.jpg" class="w-full h-40 object-cover rounded-lg">
+                <p class="text-lg font-semibold mt-2">Syrup</p>
+                <p class="text-sm mt-1 mobile-description">Our pharmaceutical syrups ensure optimal absorption and fast relief.</p>
+            </div>
+
+            
+
+        </div>
+    </div>
+
+    <script>
+        function goBack() {
+            window.location.href = "animal-products.html";
+        }
+    </script>
+
+</body>
+</html>

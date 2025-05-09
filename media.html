@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products - Flowers Pharmaceuticals</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            animation: fadeIn 1.5s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        .section {
+            transition: transform 0.5s, opacity 0.5s;
+        }
+        .section:hover {
+            transform: scale(1.02);
+            opacity: 0.9;
+        }
+        .slider-container {
+            width: 100%;
+            max-width: 800px;
+            overflow: hidden;
+            position: relative;
+        }
+        .slider {
+            display: flex;
+            transition: transform 1s ease-in-out;
+        }
+        .slider img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            flex-shrink: 0;
+        }
+    </style>
+</head>
+<body class="w-screen bg-red-400 text-black">
+    
+    <!-- Navbar -->
+    <header class="absolute top-0 left-0 w-full flex justify-between items-center h-16 p-4 bg-yellow-200 text-black z-10">
+        <div class="flex items-center space-x-3">
+            <img src="flowers-pharmaceuticals-removebg-preview.png" alt="Company Logo" class="h-16 max-h-20 object-contain">
+        </div>
+    <button id="mobile-menu-button" class="md:hidden text-black">☰</button>
+
+    <nav class="space-x-6 hidden md:flex">
+        <a href="index.html" class="relative hover:text-black before:absolute before:bottom-0 before:left-0 before:w-full before:h-1 before:bg-red-400 before:scale-x-0 hover:before:scale-x-100 before:transition-transform">Home</a>
+        <a href="about.html" class="relative hover:text-black before:absolute before:bottom-0 before:left-0 before:w-full before:h-1 before:bg-red-400 before:scale-x-0 hover:before:scale-x-100 before:transition-transform">About</a>
+        <a href="products.html" class="relative hover:text-black before:absolute before:bottom-0 before:left-0 before:w-full before:h-1 before:bg-red-400 before:scale-x-0 hover:before:scale-x-100 before:transition-transform">Products</a>
+        <a href="media.html" class="relative hover:text-black before:absolute before:bottom-0 before:left-0 before:w-full before:h-1 before:bg-red-400 before:scale-x-0 hover:before:scale-x-100 before:transition-transform">Media</a>
+        <a href="contact.html" class="relative hover:text-black before:absolute before:bottom-0 before:left-0 before:w-full before:h-1 before:bg-red-400 before:scale-x-0 hover:before:scale-x-100 before:transition-transform">Contact</a>
+    </nav>
+
+    <a href="contact.html" class="bg-red-400 text-black px-6 py-2 rounded-lg font-bold hover:bg-red-400 transition">
+        Request Info
+    </a>
+    
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="absolute top-16 left-0 w-full bg-yellow-200 text-black hidden flex-col space-y-2 p-4 md:hidden">
+        <a href="index.html" class="block">Home</a>
+        <a href="about.html" class="block">About</a>
+        <a href="products.html" class="block">Products</a>
+        <a href="media.html" class="block">Media</a>
+        <a href="contact.html" class="block">Contact</a>
+        <a href="contact.html" class="bg-red-400 text-black px-6 py-2 rounded-lg font-bold hover:bg-red-400 transition">
+            Request Info
+        </a>
+        
+    </div>
+
+    <script>
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+    </script>
+</header>
+    
+    <!-- Achievements Section -->
+    <section class="flex justify-center items-center p-10 pt-32 md:pt-24">
+        <div class="w-full max-w-screen-lg">
+            <h2 class="text-3xl font-bold text-center underline decoration-yellow-200 mb-6">Our accreditations</h2>
+            <div class="overflow-hidden rounded-lg shadow-lg">
+                <img src="cer1.png" alt="Certificate" class="w-full h-auto max-h-screen object-contain">
+            </div>
+        </div>
+    </section>
+
+    <script>
+        let index = 0;
+        function slideImages() {
+            index = (index + 1) % 3;
+            document.getElementById("slider").style.transform = `translateX(-${index * 100}%)`;
+        }
+        setInterval(slideImages, 3000);
+    </script>
+
+    <!-- Media Section -->
+    <section class="section min-h-screen bg-red-400 text-black flex flex-col justify-center items-center text-center p-10 shadow-lg">
+        <h2 class="text-5xl font-bold underline decoration-yellow-200">Our Media</h2>
+        <div class="flex space-x-6 mt-6">
+            <a href="https://www.facebook.com/Flowerspharmaceuticals/" target="_blank"><img src="facebooklogo.png" alt="Facebook" class="h-12"></a>
+            <a href="https://www.youtube.com/@flowerspharmaceuticals1019" target="_blank"><img src="youlogo.webp" alt="Youtube" class="h-12"></a>
+            <a href="https://www.instagram.com/flowers_pharmaceuticals/" target="_blank"><img src="insta-logo.webp" alt="Instagram" class="h-12"></a>
+            <a href="https://www.linkedin.com/company/flowers-pharmaceuticals/about/" target="_blank"><img src="linkedIn_PNG29.png" alt="LinkedIn" class="h-12"></a>
+        </div>
+    </section>
+</body>
+</html>

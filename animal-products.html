@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animals Nutraceutical Products - Flowers Pharmaceuticals</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="w-screen bg-red-400 text-black">
+    <button onclick="goBack()" class="absolute top-4 right-4 bg-yellow-200 text-black font-bold py-2 px-4 rounded shadow-lg hover:bg-gray-200">
+        &larr; Back
+    </button>
+    <!-- Navbar -->
+    <header class="absolute top-0 left-0 w-full flex justify-between items-center h-16 p-4 bg-yellow-200 text-black z-10">
+        <div class="flex items-center space-x-3">
+            <img src="flowers-pharmaceuticals-removebg-preview.png" alt="Company Logo" class="h-16 max-h-20 object-contain">
+        </div>
+    <button id="mobile-menu-button" class="md:hidden text-black">☰</button>
+
+    <nav class="space-x-6 hidden md:flex">
+        <a href="index.html" class="relative hover:text-black before:absolute before:bottom-0 before:left-0 before:w-full before:h-1 before:bg-red-400 before:scale-x-0 hover:before:scale-x-100 before:transition-transform">Home</a>
+        <a href="about.html" class="relative hover:text-black before:absolute before:bottom-0 before:left-0 before:w-full before:h-1 before:bg-red-400 before:scale-x-0 hover:before:scale-x-100 before:transition-transform">About</a>
+        <a href="services.html" class="relative hover:text-black before:absolute before:bottom-0 before:left-0 before:w-full before:h-1 before:bg-red-400 before:scale-x-0 hover:before:scale-x-100 before:transition-transform">Services</a>
+        <a href="products.html" class="relative hover:text-black before:absolute before:bottom-0 before:left-0 before:w-full before:h-1 before:bg-red-400 before:scale-x-0 hover:before:scale-x-100 before:transition-transform">Products</a>
+        <a href="media.html" class="relative hover:text-black before:absolute before:bottom-0 before:left-0 before:w-full before:h-1 before:bg-red-400 before:scale-x-0 hover:before:scale-x-100 before:transition-transform">Media</a>
+        <a href="contact.html" class="relative hover:text-black before:absolute before:bottom-0 before:left-0 before:w-full before:h-1 before:bg-red-400 before:scale-x-0 hover:before:scale-x-100 before:transition-transform">Contact</a>
+    </nav>
+
+    <a href="#" class="bg-red-400 text-black px-4 py-2 rounded-lg hidden md:block">Sign in</a>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="absolute top-16 left-0 w-full bg-yellow-200 text-black hidden flex-col space-y-2 p-4 md:hidden">
+        <a href="index.html" class="block">Home</a>
+        <a href="about.html" class="block">About</a>
+        <a href="services.html" class="block">Services</a>
+        <a href="products.html" class="block">Products</a>
+        <a href="media.html" class="block">Media</a>
+        <a href="contact.html" class="block">Contact</a>
+        <a href="#" class="bg-red-400 text-black px-4 py-2 rounded-lg block text-center">Sign in</a>
+    </div>
+
+    <script>
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+    </script>
+</header>
+    <!-- Products Section -->
+<section class="h-screen flex justify-center items-center p-10 pt-32 md:pt-24">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 w-full max-w-6xl mt-52 md:mt-24">
+        <!-- Human Products -->
+        <div class="relative w-full h-96 flex justify-center items-center rounded-lg overflow-hidden shadow-lg">
+            <video autoplay loop muted class="absolute inset-0 w-full h-full object-cover">
+                <source src="Syrupdogs.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <a href="syrup.html" class="relative z-10 bg-yellow-200 bg-opacity-50 text-white text-2xl font-bold px-6 py-3 rounded-lg hover:bg-opacity-70 transition">
+                Animal Syrups
+            </a>
+        </div>
+        <!-- Animal Products -->
+        <div class="relative w-full h-96 flex justify-center items-center rounded-lg overflow-hidden shadow-lg">
+            <video autoplay loop muted class="absolute inset-0 w-full h-full object-cover">
+                <source src="dogstablets.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <a href="tablets.html" class="relative z-10 bg-yellow-200 bg-opacity-50 text-white text-2xl font-bold px-6 py-3 rounded-lg hover:bg-opacity-70 transition">
+                Animal Tablets
+            </a>
+        </div>
+    </div>
+    </section>
+    <script>
+        function goBack() {
+            window.location.href = "products.html";
+        }
+    </script>
+
+</body>
+</html>
